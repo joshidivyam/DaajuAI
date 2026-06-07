@@ -58,13 +58,14 @@ Open `http://localhost:3000` in your browser.
 
 ---
 
-## Project Structure
-daaju-ai/
-├── public/
+daaju-ai
+│
+├── public
 │   ├── index.html
 │   ├── style.css
 │   ├── script_frontend.js
 │   └── sendButtonSvg.svg
+│
 ├── script_backend.js
 ├── .env
 ├── .gitignore
