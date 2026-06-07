@@ -38,7 +38,7 @@ app.post("/chat", async (req, res) => {
 
   } catch (error) {
     console.error("Gemini error:", error);
-    return res.status(500).json({ reply: "Something went wrong. Try again!" });
+    return res.status(500).json({ reply: "Error!", error });
   }
 });
 
