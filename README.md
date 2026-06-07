@@ -3,6 +3,8 @@
 
 visit DaajuAI->https://daajuai.onrender.com/
 
+⚠️ Note: This app is hosted on Render's free tier, which spins down after 15 minutes of inactivity. If the chatbot doesn't respond immediately, wait 20–30 seconds for the server to restart and try again.
+
 # DaajuAI
 
 A conversational AI chatbot built with Node.js and Express on the backend and vanilla JavaScript on the frontend. Powered by Gemini 2.5 Flash with real-time Google Search grounding — responses reflect current information, not just training data. Each answer includes citations linking back to the sources used.
