@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quintessential&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #080616;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.containerDiv {
+  width: min(100%, 1000px);
+  height: 95vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: #0c0539;
+  padding: 12px;
+  gap: 10px;
+  border-radius: 15px;
+}
+
+.containerDiv h1 {
+  color: #EAE0CF;
+  font-size: clamp(1rem, 2.1vw, 1.7rem);
+  font-family: "Quintessential", serif;
+  text-align: center;
+  word-spacing: 2px;
+  line-height: 1.15;
+  flex-shrink: 0;
+}
+
+#h1span {
+  font-size: clamp(1.3rem, 3vw, 2.2rem);
+  color: #C44A3A;
+}
+
+.displayDialogDiv {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  color: #EAE0CF;
+  font-size: clamp(0.5rem, 1.5vw, 0.8rem);
+  font-family: "Montserrat", serif;
+  background: #1A1953;
+  overflow-y: auto;
+  padding: 15px;
+  border-radius: 12px;
+  gap: 5px;
+}
+
+.dialogForm {
+  width: 100%;
+  min-height: 120px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+
+  padding: 12px;
+  border-radius: 10px;
+
+  flex-shrink: 0;
+}
+
+#msgInput {
+  flex: 1;
+  min-width: 0;
+
+  min-height: 80px;
+  max-height: 200px;
+
+  padding: 10px;
+
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+
+  border: none;
+  outline: none;
+  border-radius: 5px;
+
+  background: transparent;
+  color: #C44A3A;
+
+  font-family: "Quintessential", serif;
+
+  resize: none;
+  overflow-y: auto;
+}
+
+#msgInput::placeholder {
+  font-size: inherit;
+}
+
+#sendButton {
+  width: clamp(70px, 15%, 120px);
+  height: 80px;
+
+  border: none;
+  outline: none;
+  border-radius: 5px;
+
+  background: transparent;
+  cursor: pointer;
+
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+
+  flex-shrink: 0;
+}
+
+
+@media (max-width:768px) {
+
+  .containerDiv {
+    gap: 8px;
+  }
+
+  .dialogForm {
+    min-height: 110px;
+  }
+
+  #msgInput {
+    min-height: 70px;
+    max-height: 180px;
+  }
+
+  #sendButton {
+    height: 70px;
+  }
+}
+
+@media (max-width:480px) {
+
+  .containerDiv {
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .containerDiv h1 {
+    font-size: 0.85rem;
+    line-height: 1.1;
+  }
+
+  #h1span {
+    font-size: 1.4rem;
+  }
+
+  .dialogForm {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: auto;
+  }
+
+  #msgInput {
+    width: 100%;
+    min-height: 70px;
+    max-height: 150px;
+    font-size: 1rem;
+  }
+
+  #sendButton {
+    width: 100%;
+    height: 55px;
+  }
+}
+
+
+
+.message-bubble {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  max-width: 85%;
+  line-height: 1.6;
+  font-size: clamp(0.75rem, 1.4vw, 0.88rem);
+}
+
+.user-bubble {
+  background: rgba(196, 74, 58, 0.15);
+  border: 1px solid rgba(196, 74, 58, 0.3);
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.ai-bubble {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  align-self: flex-start;
+}
+
+.message-body p {
+  margin: 0 0 6px 0;
+}
+
+.message-body ul, .message-body ol {
+  padding-left: 18px;
+  margin: 4px 0;
+}
+
+.message-body code {
+  background: rgba(255,255,255,0.1);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+.message-body pre {
+  background: rgba(0,0,0,0.3);
+  padding: 10px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+
+.sources {
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: #8888aa;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.sources a {
+  color: #C44A3A;
+  text-decoration: none;
+  border-bottom: 1px dotted #C44A3A;
+}
+
+.sources a:hover {
+  color: #e06050;
+}
+
+
+.typing-indicator {
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 5px;
+  padding: 12px 16px;
+  width: fit-content;
+}
+
+.typing-indicator span {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #C44A3A;
+  border-radius: 50%;
+  animation: typingBounce 1.2s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+.typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typingBounce {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+  40% { transform: translateY(-6px); opacity: 1; }
+}
+
+.displayDialogDiv {
+  display: flex;
+  flex-direction: column;
+}
