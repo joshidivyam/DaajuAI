@@ -1,3 +1,5 @@
+const sessionId = crypto.randomUUID(); // one id per page load/tab
+
 const form = document.querySelector(".dialogForm");
 const msgInput = document.getElementById("msgInput");
 const displayDialogDiv = document.querySelector(".displayDialogDiv");
@@ -76,7 +78,7 @@ form.addEventListener("submit", async (e) => {
     const response = await fetch("/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message })
+      body: JSON.stringify({ message, sessionId })
     });
 
     const data = await response.json();
